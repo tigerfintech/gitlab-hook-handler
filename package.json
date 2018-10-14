@@ -1,0 +1,7 @@
+{
+  "name": "gitlab-hook-handler",
+  "version": "1.0.0",
+  "description": "gitlab hook handler, koa middleware",
+  "main": "index.js",
+  "license": "MIT"
+}
