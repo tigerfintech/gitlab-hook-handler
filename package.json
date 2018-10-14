@@ -1,7 +1,15 @@
 {
   "name": "gitlab-hook-handler",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "gitlab hook handler, koa middleware",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "es/index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "node_modules/babel-cli/bin/babel.js index.js --out-dir es/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }
