@@ -33,10 +33,9 @@ function create (option) {
 
         const token = ctx.headers['x-gitlab-token'];
 
-        if(!token || token !== curOpt.secret) {
+        if(curOpt.secret && (!token || token !== curOpt.secret)) {
             return hasError('No X-Gitlab-Token found on request or the token did not match');
         }
-
 
         const event = ctx.headers['x-gitlab-event'];
 
