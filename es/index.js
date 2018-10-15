@@ -56,7 +56,7 @@ function create(option) {
             event: event,
             path: curOpt.path,
             playload: ctx.request.body,
-            protocol: req.protocol,
+            protocol: ctx.protocol,
             host: ctx.headers['host'],
             url: ctx.url
         };
