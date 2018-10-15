@@ -46,7 +46,7 @@ function create (option) {
         ctx.body = '{"ok":true}';
 
         const emitData = {
-            event,
+            event: event.toLowerCase().replace(/hook/, '').trim().replace(' ', '_'),
             path: curOpt.path,
             playload: ctx.request.body,
             protocol: ctx.protocol,
