@@ -54,7 +54,7 @@ function create (option) {
             url: ctx.url
         };
 
-        handler.emit(event, emitData);
+        handler.emit(emitData.event, emitData);
         handler.emit('*', emitData);
     }
     
