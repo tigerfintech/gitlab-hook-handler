@@ -45,16 +45,18 @@ function create (option) {
         ctx.headers['Content-Type'] = 'application/json';
         ctx.body = '{"ok":true}';
 
+        const eventName = event.toLowerCase().replace(/hook/, '').trim().replace(' ', '_');
+
         const emitData = {
-            event: event.toLowerCase().replace(/hook/, '').trim().replace(' ', '_'),
-            path: curOpt.path,
+            eventName,
+            pathname: curOpt.path,
             playload: ctx.request.body,
             protocol: ctx.protocol,
             host: ctx.headers['host'],
             url: ctx.url
         };
 
-        handler.emit(emitData.event, emitData);
+        handler.emit(eventName, emitData);
         handler.emit('*', emitData);
     }
     
