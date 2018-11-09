@@ -1,6 +1,6 @@
 {
   "name": "gitlab-hook-handler",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "gitlab hook handler, koa middleware",
   "main": "es/index.js",
   "license": "MIT",
@@ -8,6 +8,13 @@
     "prepublish": "node_modules/babel-cli/bin/babel.js index.js --out-dir es/",
     "test": "jest"
   },
+  "author": "deju",
+  "keywords": [
+    "gitlab",
+    "gitlab webhook",
+    "gitlab hook handler"
+  ],
+  "homepage": "https://github.com/tigerfintech/gitlab-hook-handler",
   "dependencies": {},
   "devDependencies": {
     "@shopify/jest-koa-mocks": "^2.0.12",

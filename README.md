@@ -1,9 +1,14 @@
-
-### Usage
+### Install
 
     yarn add gitlab-hook-handler
 
-    // then in your koa file
+    // or
+
+    npm i gitlab-hook-handler
+
+
+### Usage with Koa
+
 
     import Koa from 'koa';
     import createHandler from 'gitlab-hook-handler';
