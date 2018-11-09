@@ -1,6 +1,10 @@
 
 ### Usage
 
+    yarn add gitlab-hook-handler
+
+    // then in your koa file
+
     import Koa from 'koa';
     import createHandler from 'gitlab-hook-handler';
 
