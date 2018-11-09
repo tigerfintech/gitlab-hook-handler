@@ -5,11 +5,14 @@
   "main": "es/index.js",
   "license": "MIT",
   "scripts": {
-    "prepublish": "node_modules/babel-cli/bin/babel.js index.js --out-dir es/"
+    "prepublish": "node_modules/babel-cli/bin/babel.js index.js --out-dir es/",
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
+    "@shopify/jest-koa-mocks": "^2.0.12",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0"
   }
 }
