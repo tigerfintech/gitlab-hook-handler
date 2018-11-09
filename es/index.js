@@ -28,13 +28,13 @@ function create(option) {
 
         if (Array.isArray(option)) {
             curOpt = option.find(function (item) {
-                return ctx.path.search(item.path) === 0;
+                return ctx.path === item.path;
             });
         } else {
             curOpt = option;
         }
 
-        if (!curOpt || ctx.path.search(curOpt.path) !== 0) {
+        if (!curOpt || ctx.path !== curOpt.path) {
             return next();
         }
 

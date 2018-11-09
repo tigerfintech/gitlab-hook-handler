@@ -22,12 +22,12 @@ function create (option) {
         let curOpt;
 
         if (Array.isArray(option)) {
-            curOpt = option.find((item) => ctx.path.search(item.path) === 0);
+            curOpt = option.find((item) => ctx.path === item.path);
         } else {
             curOpt = option;
         }
 
-        if (!curOpt || ctx.path.search(curOpt.path) !== 0) {
+        if (!curOpt || ctx.path !== curOpt.path) {
             return next();
         }
 
