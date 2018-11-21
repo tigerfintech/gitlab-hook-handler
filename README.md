@@ -35,13 +35,13 @@
 
     // you can listen on merge_request, note, push, tag_push ...
     handler.on('merge_request', function (event) {
-        const { eventName, playload, pathname, host, url, protocol } = event;
+        const { eventName, payload, pathname, host, url, protocol } = event;
 
         // do something
     });
 
     handler.on('*', function (event) {
-        const { eventName, playload, pathname, host, url, protocol } = event;
+        const { eventName, payload, pathname, host, url, protocol } = event;
 
         // do something
     })

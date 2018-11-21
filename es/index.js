@@ -57,7 +57,7 @@ function create(option) {
         var emitData = {
             eventName: eventName,
             pathname: curOpt.path,
-            playload: ctx.request.body,
+            payload: ctx.request.body,
             protocol: ctx.protocol,
             host: ctx.headers['host'],
             url: ctx.url

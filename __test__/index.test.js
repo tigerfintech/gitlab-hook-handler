@@ -19,7 +19,7 @@ describe('index test', () => {
         const cbSpy = jest.fn();
         handler.on('*', (m) => {
             expect(JSON.stringify(m)).toEqual(
-                "{\"eventName\":\"note\",\"pathname\":\"/hook\",\"playload\":{\"a\":1},\"protocol\":\"http\",\"host\":\"a.b.c\",\"url\":\"http://a.b.c/hook\"}"
+                "{\"eventName\":\"note\",\"pathname\":\"/hook\",\"payload\":{\"a\":1},\"protocol\":\"http\",\"host\":\"a.b.c\",\"url\":\"http://a.b.c/hook\"}"
             );
             done();
         });
@@ -78,7 +78,7 @@ describe('index test', () => {
         const cbSpy = jest.fn();
         handler.on('*', (m) => {
             expect(JSON.stringify(m)).toEqual(
-                "{\"eventName\":\"note\",\"pathname\":\"/hook\",\"playload\":{\"a\":1},\"protocol\":\"http\",\"host\":\"test.com\",\"url\":\"http://test.com/hook\"}"
+                "{\"eventName\":\"note\",\"pathname\":\"/hook\",\"payload\":{\"a\":1},\"protocol\":\"http\",\"host\":\"test.com\",\"url\":\"http://test.com/hook\"}"
             );
             done();
         });
@@ -98,7 +98,7 @@ describe('index test', () => {
         const cbSpy = jest.fn();
         handler.on('*', (m) => {
             expect(JSON.stringify(m)).toEqual(
-                "{\"eventName\":\"note\",\"pathname\":\"/hook1\",\"playload\":{\"a\":1},\"protocol\":\"http\",\"host\":\"test.com\",\"url\":\"http://test.com/hook1\"}"
+                "{\"eventName\":\"note\",\"pathname\":\"/hook1\",\"payload\":{\"a\":1},\"protocol\":\"http\",\"host\":\"test.com\",\"url\":\"http://test.com/hook1\"}"
             );
             done();
         });
