@@ -63,8 +63,8 @@ function create(option) {
             url: ctx.url
         };
 
-        handler.emit(eventName, emitData);
-        handler.emit('*', emitData);
+        handler.emit(eventName, emitData, ctx, next);
+        handler.emit('*', emitData, ctx, next);
     }
 
     handler.__proto__ = _events.EventEmitter.prototype;
